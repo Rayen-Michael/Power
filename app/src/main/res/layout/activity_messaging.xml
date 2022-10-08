@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="messagingVM" type="com.application.app.modules.messaging.data.viewmodel.MessagingVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameMessaging"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <FrameLayout android:id="@+id/frameStackbackdrop"
+            android:layout_gravity="top|start"
+            android:layout_height="@dimen/_715pxv"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:layout_marginTop="@dimen/_4pxv" android:layout_width="match_parent">
+            <ImageView android:id="@+id/imageBackdrop"
+                android:layout_gravity="start"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_bg_teal_50_689x214}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_bg_teal_50_689x214"/>
+            <LinearLayout android:id="@+id/linearColumnarrowleft"
+                android:layout_gravity="top|center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_48pxv"
+                android:layout_marginEnd="@dimen/_14pxh"
+                android:layout_marginStart="@dimen/_14pxh"
+                android:layout_marginTop="@dimen/_48pxv"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_19pxh"
+                    android:layout_marginEnd="@dimen/_18pxh"
+                    android:layout_marginStart="@dimen/_18pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <LinearLayout
+                    android:id="@+id/linearColumnrectangleseven"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_33pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearRowrectangleseven"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_18pxh"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <FrameLayout android:id="@+id/frameMessagingpfp"
+                            android:layout_height="@dimen/_109pxv" android:layout_width="@dimen/_109pxh">
+                            <ImageView
+                                android:id="@+id/imageRectangleSeven"
+                                android:layout_gravity="start"
+                                android:layout_height="@dimen/_109pxh"
+                                android:layout_width="@dimen/_109pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_rectangle7_black_900"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle7_black_900"/>
+                            <ImageView
+                                android:id="@+id/imageRectangleOne"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/_71pxh"
+                                android:layout_marginBottom="@dimen/_19pxv"
+                                android:layout_marginEnd="@dimen/_19pxh"
+                                android:layout_marginStart="@dimen/_20pxh"
+                                android:layout_marginTop="@dimen/_19pxv"
+                                android:layout_width="@dimen/_69pxh"
+                                android:scaleType="fitXY"
+                                cornerRadius="@{@dimen/_34pxh}"
+                                imageRes="@{@drawable/img_rectangle1_71x69}"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle1_71x69"/>
+                        </FrameLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearNamestatus"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_29pxv"
+                            android:layout_marginStart="@dimen/_20pxh"
+                            android:layout_marginTop="@dimen/_39pxv"
+                            android:layout_weight="0.53"
+                            android:layout_width="0dp" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtCharlieKelly"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{messagingVM.messagingModel.txtCharlieKelly}"
+                                style="@style/txtPoppinsregular20_1" tools:text="@string/lbl_charlie_kelly"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtOnline"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginTop="@dimen/_4pxv"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{messagingVM.messagingModel.txtOnline}"
+                                style="@style/txtPoppinsregular12_4" tools:text="@string/lbl_online"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameStackonlineOne"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_40pxv"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_81pxv" android:layout_width="@dimen/_189pxh">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtOnlineOne"
+                            android:layout_gravity="bottom|start"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginEnd="@dimen/_26pxh"
+                            android:layout_marginStart="@dimen/_26pxh"
+                            android:layout_marginTop="@dimen/_10pxv"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{messagingVM.messagingModel.txtOnlineOne}"
+                            style="@style/txtPoppinsregular12_4" tools:text="@string/lbl_online"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:id="@+id/btnWeRGoinToCTheLions"
+                            android:layout_gravity="start"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="@dimen/_12pxv"
+                            android:paddingEnd="@dimen/_20pxh"
+                            android:paddingStart="@dimen/_26pxh"
+                            android:paddingTop="@dimen/_12pxv"
+                            android:singleLine="true"
+                            android:text="@string/msg_we_r_goin_to_c"
+                            android:textAllCaps="false"
+                            style="@style/btnSolidRounded" tools:text="@string/msg_we_r_goin_to_c"/>
+                    </FrameLayout>
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumntheyaredoing"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_16pxv"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical" style="@style/groupStylegray_50cornerRadius">
+                        <TextView android:gravity="start"
+                            android:id="@+id/txtTheyaredoing"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/_11pxv"
+                            android:layout_marginEnd="@dimen/_26pxh"
+                            android:layout_marginStart="@dimen/_26pxh"
+                            android:layout_marginTop="@dimen/_15pxv"
+                            android:layout_width="match_parent"
+                            android:text="@{messagingVM.messagingModel.txtTheyaredoing}"
+                            style="@style/txtPoppinsregular12_4" tools:text="@string/msg_they_are_doing"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:ellipsize="end" android:gravity="center"
+                        android:id="@+id/btnWhen"
+                        android:layout_gravity="end"
+                        android:layout_height="@dimen/_40pxv"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_40pxv"
+                        android:layout_width="@dimen/_106pxh"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_when"
+                        android:textAllCaps="false"
+                        style="@style/btnSolidRounded" tools:text="@string/lbl_when"/>
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumnseethelionso"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_16pxv"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical" style="@style/groupStylegray_1">
+                        <TextView android:gravity="end"
+                            android:id="@+id/txtSeethelionso"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/_15pxv"
+                            android:layout_marginEnd="@dimen/_11pxh"
+                            android:layout_marginStart="@dimen/_11pxh"
+                            android:layout_marginTop="@dimen/_16pxv"
+                            android:layout_width="match_parent"
+                            android:text="@{messagingVM.messagingModel.txtSeethelionso}"
+                            style="@style/txtPoppinsregular12_4" tools:text="@string/msg_see_the_lions_o"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@+id/frameMessagebar"
+            android:layout_gravity="bottom|center"
+            android:layout_height="@dimen/_86pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_39pxh"
+            android:layout_marginStart="@dimen/_39pxh"
+            android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_296pxh">
+            <LinearLayout android:id="@+id/linearColumnwriteamessage"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+                <TextView android:ellipsize="end"
+                    android:gravity="start"
+                    android:id="@+id/txtWriteamessage"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_31pxv"
+                    android:layout_marginEnd="@dimen/_46pxh"
+                    android:layout_marginStart="@dimen/_46pxh"
+                    android:layout_marginTop="@dimen/_34pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{messagingVM.messagingModel.txtWriteamessage}"
+                    style="@style/txtPoppinsregular12_4" tools:text="@string/msg_write_a_message"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageRewind"
+                android:layout_gravity="end"
+                android:layout_height="@dimen/_86pxh"
+                android:layout_marginEnd="@dimen/_6pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_width="@dimen/_88pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_rewind"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rewind"/>
+        </FrameLayout>
+    </FrameLayout>
+</layout>
