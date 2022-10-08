@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="conversationsRowModel" type="com.application.app.modules.conversations.data.model.ConversationsRowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameCardMessage"
+        android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:id="@+id/linearColumnmalenatudi"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1pxh"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700_99cornerRadius">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMalenaTudi"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_95pxh"
+                android:layout_marginStart="@dimen/_95pxh"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{conversationsRowModel.txtMalenaTudi}"
+                style="@style/txtPoppinsregular12_3" tools:text="@string/lbl_malena_tudi"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHeyhowsitg"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_42pxv"
+                android:layout_marginEnd="@dimen/_95pxh"
+                android:layout_marginStart="@dimen/_95pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{conversationsRowModel.txtHeyhowsitg}"
+                style="@style/txtPoppinsregular12_4" tools:text="@string/msg_hey_how_s_it_g"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameStackrectangleseven"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_95pxv"
+            android:layout_marginBottom="@dimen/_4pxv"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_3pxv" android:layout_width="@dimen/_96pxh">
+            <ImageView android:id="@+id/imageRectangleSeven"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_95pxh"
+                android:layout_width="@dimen/_96pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_rectangle7"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle7"/>
+            <ImageView android:id="@+id/imageRectangleOne"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_62pxh"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_17pxh"
+                android:layout_marginStart="@dimen/_17pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_width="@dimen/_61pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_30pxh}"
+                imageRes="@{@drawable/img_rectangle1_62x61}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle1_62x61"/>
+        </FrameLayout>
+    </FrameLayout>
+</layout>

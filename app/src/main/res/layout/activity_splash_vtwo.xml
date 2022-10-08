@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashVtwoVM" type="com.application.app.modules.splashvtwo.data.viewmodel.SplashVtwoVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStack"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <FrameLayout android:id="@+id/frameSplashvTwo"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+            <FrameLayout android:id="@+id/frameStackcomponentone"
+                android:layout_gravity="bottom|end"
+                android:layout_height="@dimen/_366pxv"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_265pxh">
+                <ImageView android:id="@+id/imageComponentOne"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_366pxh"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_component1_black_900}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_component1_black_900"/>
+                <LinearLayout android:id="@+id/linearRownext"
+                    android:layout_gravity="top|end"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_156pxv"
+                    android:layout_marginEnd="@dimen/_52pxh"
+                    android:layout_marginStart="@dimen/_52pxh"
+                    android:layout_marginTop="@dimen/_156pxv"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtNext"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{splashVtwoVM.splashVtwoModel.txtNext}"
+                        style="@style/txtPoppinsbold20" tools:text="@string/lbl_next"/>
+                    <ImageView android:id="@+id/imageArrowright"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_marginBottom="@dimen/_2pxv"
+                        android:layout_marginStart="@dimen/_11pxh"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowright_black_900"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_black_900"/>
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameStackbg"
+                android:layout_gravity="top|start"
+                android:layout_height="@dimen/_758pxv"
+                android:layout_marginBottom="@dimen/_10pxv" android:layout_width="match_parent">
+                <ImageView android:id="@+id/imageBg"
+                    android:layout_gravity="start"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_bg}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_bg"/>
+                <LinearLayout android:id="@+id/linearColumnwelcometo"
+                    android:layout_gravity="top|end"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_118pxv"
+                    android:layout_marginEnd="@dimen/_22pxh"
+                    android:layout_marginStart="@dimen/_22pxh"
+                    android:layout_marginTop="@dimen/_118pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWelcometo"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_100pxh"
+                        android:layout_marginStart="@dimen/_100pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{splashVtwoVM.splashVtwoModel.txtWelcometo}"
+                        style="@style/txtPoppinsregular16" tools:text="@string/lbl_welcome_to"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtSocially"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_69pxh"
+                        android:layout_marginStart="@dimen/_69pxh"
+                        android:layout_marginTop="@dimen/_15pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{splashVtwoVM.splashVtwoModel.txtSocially}"
+                        style="@style/txtPoppinsbold39" tools:text="@string/lbl_socially"/>
+                    <ImageView android:gravity="start"
+                        android:id="@+id/imageFrame"
+                        android:layout_height="@dimen/_213pxh"
+                        android:layout_marginTop="@dimen/_52pxv"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_frame_213x314"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_frame_213x314"/>
+
+                    <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                        android:id="@+id/indicatorMusic"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_124pxh"
+                        android:layout_marginStart="@dimen/_124pxh"
+                        android:layout_marginTop="@dimen/_104pxv"
+                        android:layout_width="wrap_content"
+                        app:drawable_selected="@drawable/indicator_selected_bg_black_900_radius_8"
+                        app:indicator_size="@dimen/_11pxh" app:indicator_spacing="@dimen/_7pxh"/>
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+</layout>
